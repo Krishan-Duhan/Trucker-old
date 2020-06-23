@@ -1,12 +1,13 @@
 package academy.ennate.entity;
 
-import org.springframework.stereotype.Component;
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
+@Entity
 public class Vehicles {
     @Id
+    @Column(columnDefinition = "VARCHAR(36)")
     String vin;
     String model;
     String make;

@@ -2,12 +2,10 @@ package academy.ennate.controller;
 
 import academy.ennate.entity.Vehicles;
 import academy.ennate.service.VehicleService;
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.*;
 import java.util.List;
 
 @CrossOrigin
