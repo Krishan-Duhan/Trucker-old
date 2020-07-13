@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class VehicleServiceImpl implements VehicleService {
@@ -29,7 +30,9 @@ public class VehicleServiceImpl implements VehicleService {
     @Transactional
     public void loadVehicles(Vehicles[] vehicles) {
         for (Vehicles vehicle : vehicles){
-            //Optional<Vehicles> existing = repository.findByVin(vehicle.getVin());
+            //Optional<Vehicles> existing = repository.findById(vehicle.getVin());
+            //if (existing.isPresent()) {
+            //}
             repository.save(vehicle);
         }
     }

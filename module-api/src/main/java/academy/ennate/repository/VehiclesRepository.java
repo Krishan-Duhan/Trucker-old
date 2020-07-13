@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface VehiclesRepository extends CrudRepository<Vehicles, String> {
-    Optional<Vehicles> findByVin(String vin);
+    //Optional<Vehicles> findByVin(String vin);
 }
