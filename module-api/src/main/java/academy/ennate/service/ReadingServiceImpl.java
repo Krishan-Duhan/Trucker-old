@@ -17,9 +17,9 @@ public class ReadingServiceImpl implements ReadingService {
     AlertsService service;
 
     @Override
-    public void insertReadings(Readings readings) {
-        repository.save(readings);
-        //alert check
+    public void insertReadings(Readings reading) {
+        repository.save(reading);
+        service.validateRule(reading);
     }
 
     @Override

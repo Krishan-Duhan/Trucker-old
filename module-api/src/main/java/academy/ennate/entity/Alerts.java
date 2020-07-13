@@ -14,6 +14,16 @@ public class Alerts {
     private String severity;
     private Timestamp timeOccured;
 
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    private String reason;
+
     public String getAlertID() {
         return alertID;
     }

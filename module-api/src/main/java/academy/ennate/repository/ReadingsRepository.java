@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import java.util.List;
 
 public interface ReadingsRepository extends CrudRepository {
-    @Query
-
+    @Query(value = "select * from readings r where r.vin = ?1 "
+                    + "and r.timestamp >  DATE_SUB(CONVERT_TZ(NOW(),'GMT','America/Chicago'), INTERVAL ?2 MINUTE)", nativeQuery = true)
     public List<Readings> getVehicleInfo(String vin, Integer min);
 }
