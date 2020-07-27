@@ -6,8 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
-
-public interface AlertsRepository extends CrudRepository {
+public interface AlertsRepository extends CrudRepository<Alerts, String> {
     public List<Alerts> findAlertsByVin(String vin);
 
     @Query(value = "select *  from alerts " + "where severity= ?1 "
